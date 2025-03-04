@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saca conclusiones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Spinner de carga -->
+    <div id="cargando">
+        <div class="spinner"></div>
+    </div>
+
+    <div id="Pag1" class="oculto">
+        <video autoplay muted loop id="video-fondo">
+            <source src="imágenes/fondo.mp4" type="video/mp4">
+        </video>
+
+        <div id="mensajeAdvertencia" class="oculto">
+            <span id="cerrarAdvertencia">&times;</span> <!-- "X" para cerrar -->
+            <p>Debes responder a las 3 preguntas para poder continuar.</p>
+        </div>
+    
+        <div id="preguntas">
+            <h1>¿Eres feliz?</h1>
+            <input type="radio" id="felizActSi" name="felicidadActual" value="si">
+            <label for="felizActSi">Sí</label>
+            <input type="radio" id="felizActNo" name="felicidadActual" value="no">
+            <label for="felizActNo">No</label>
+
+            <h1>¿Crees que en el futuro serás más feliz?</h1>
+            <input type="radio" id="felizFutSi" name="felicidadFutura" value="si">
+            <label for="felizFutSi">Sí</label>
+            <input type="radio" id="felizFutNo" name="felicidadFutura" value="no">
+            <label for="felizFutNo">No</label>
+
+            <h1>Escribe una palabra, la que quieras.</h1>
+            <div id="contenedorPalabra">
+                <input type="password" id="palabra">
+                <span id="togglePassword" class="eye-icon">
+                    <img src="imágenes/ojo-cerrado2.png" alt="ojoCerrado">
+                </span>
+                <div id="hazLuz" class="haz-luz"></div>
+            </div>
+
+            <button id="boton">Continuar</button>
+        </div>
+        
+    </div>
+
+    <div id="resultado" class="oculto">
+        <h1> Te recomiendo ver:</h1>
+        <img id="imagenPelicula" src="" alt="Imagen de la película">
+        <audio id="audio"></audio>
+        <button id="volverAtras">Responder de nuevo</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
